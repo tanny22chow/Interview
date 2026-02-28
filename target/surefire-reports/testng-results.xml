@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="1" total="7" passed="6" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-02-26T11:41:08Z" name="ParallelSuite" finished-at="2026-02-26T11:41:17Z" duration-ms="9740">
+    <groups>
+    </groups>
+    <test started-at="2026-02-26T11:41:08Z" name="dsacheck" finished-at="2026-02-26T11:41:08Z" duration-ms="56">
+      <class name="org.example.dsa.dsacheck">
+        <test-method signature="check_palindrome()[pri:0, instance:org.example.dsa.dsacheck@4fe767f3]" started-at="2026-02-26T17:11:08Z" name="check_palindrome" finished-at="2026-02-26T17:11:08Z" duration-ms="7" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- check_palindrome -->
+        <test-method signature="count_characters()[pri:0, instance:org.example.dsa.dsacheck@4fe767f3]" started-at="2026-02-26T17:11:08Z" name="count_characters" finished-at="2026-02-26T17:11:08Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- count_characters -->
+        <test-method signature="removeduplicate()[pri:0, instance:org.example.dsa.dsacheck@4fe767f3]" started-at="2026-02-26T17:11:08Z" name="removeduplicate" finished-at="2026-02-26T17:11:08Z" duration-ms="16" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- removeduplicate -->
+        <test-method signature="reverse_a_string()[pri:0, instance:org.example.dsa.dsacheck@4fe767f3]" started-at="2026-02-26T17:11:08Z" name="reverse_a_string" finished-at="2026-02-26T17:11:08Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reverse_a_string -->
+      </class> <!-- org.example.dsa.dsacheck -->
+    </test> <!-- dsacheck -->
+    <test started-at="2026-02-26T11:41:08Z" name="Test1" finished-at="2026-02-26T11:41:17Z" duration-ms="9740">
+      <class name="org.example.RestTest">
+        <test-method signature="m2()[pri:0, instance:org.example.RestTest@1198b989]" started-at="2026-02-26T17:11:17Z" name="m2" finished-at="2026-02-26T17:11:17Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- m2 -->
+      </class> <!-- org.example.RestTest -->
+      <class name="org.example.AppTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:org.example.AppTest@527e5409]" started-at="2026-02-26T17:11:08Z" name="setup" finished-at="2026-02-26T17:11:13Z" duration-ms="5504" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="m1()[pri:0, instance:org.example.AppTest@527e5409]" started-at="2026-02-26T17:11:13Z" name="m1" finished-at="2026-02-26T17:11:17Z" duration-ms="3328" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- m1 -->
+        <test-method is-config="true" signature="destroy()[pri:0, instance:org.example.AppTest@527e5409]" started-at="2026-02-26T17:11:17Z" name="destroy" finished-at="2026-02-26T17:11:17Z" duration-ms="901" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- destroy -->
+      </class> <!-- org.example.AppTest -->
+    </test> <!-- Test1 -->
+  </suite> <!-- ParallelSuite -->
+</testng-results>
