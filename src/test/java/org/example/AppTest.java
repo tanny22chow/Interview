@@ -21,7 +21,7 @@ public class AppTest
     }
     @Test
     public void m1(){
-        d.get("https://medium.com/");
+        d.navigate().to("https://medium.com/");
 
     }
     @AfterTest
