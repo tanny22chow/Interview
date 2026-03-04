@@ -1,34 +1,30 @@
 package org.example;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.MutableCapabilities;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.*;
 
 import java.net.MalformedURLException;
-import java.net.URL;
 
-/**
- * Unit test for simple App.
- */
 public class AppTest 
 
 {
     WebDriver driver;
+    ThreadLocal<WebDriver> thlocal;
     @BeforeMethod(enabled = true)
     public void setup() throws MalformedURLException {
         driver=new Driverfactory().getDriver();
+        thlocal=new ThreadLocal<>();
+        thlocal.set(driver);
 
     }
     @Test
     public void m1(){
-        driver.navigate().to("https://medium.com/");
-        System.out.println(driver.getPageSource());
+        thlocal.get().navigate().to("https://medium.com/");
+        System.out.println(driver.getTitle());
     }
     @AfterMethod(enabled = true)
     public void destroy(){
-        driver.quit();
+        thlocal.get().quit();
+        thlocal.remove();
     }
 }
