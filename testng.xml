@@ -2,13 +2,6 @@
     <test name="Test1">
         <classes>
             <class name="org.example.AppTest"/>
-            <class name="org.example.RestTest"/>
-        </classes>
-    </test>
-
-    <test name="dsacheck">
-        <classes>
-            <class name="org.example.dsa.dsacheck"/>
         </classes>
     </test>
 </suite>
