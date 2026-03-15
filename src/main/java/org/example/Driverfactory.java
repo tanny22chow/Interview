@@ -18,8 +18,6 @@ public class Driverfactory {
         Properties p=new commonutils().configreader("./src/main/resources/bstack.properties");
         MutableCapabilities cap=new MutableCapabilities();
         switch (browser){
-            case "chrome"->
-                cap.setCapability("browserName", "Chrome");
             case "firefox"->
                 cap.setCapability("browserName", "Firefox");
             case "edge"->
@@ -34,10 +32,6 @@ public class Driverfactory {
     public WebDriver getDriver() throws MalformedURLException {
         if (System.getProperty("env").equals("local")) {
             switch (System.getProperty("browser")) {
-                case "chrome" -> {
-                    WebDriverManager.chromedriver().setup();
-                    driver = new ChromeDriver();
-                }
                 case "firefox" -> {
                     WebDriverManager.firefoxdriver().setup();
                     driver = new FirefoxDriver();
@@ -54,7 +48,6 @@ public class Driverfactory {
 
         } else if (System.getProperty("env").equals("cloud")) {
             switch (System.getProperty("browser")) {
-                case "chrome" -> driver = bstacksetup("chrome");
                 case "firefox" -> driver = bstacksetup("firefox");
                 case "safari" -> driver = bstacksetup("edge");
                 default -> driver = bstacksetup("chrome");
@@ -64,5 +57,8 @@ public class Driverfactory {
         threadLocal.set(driver);
         return threadLocal.get();
 
+    }
+    public void resetThreadlocal(){
+        threadLocal.remove();
     }
 }
